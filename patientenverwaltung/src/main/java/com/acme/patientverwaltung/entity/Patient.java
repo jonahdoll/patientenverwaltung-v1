@@ -14,7 +14,8 @@ public class Patient {
     private Krankenakte krankenakte;
     private List<Termin> termine;
 
-    public Patient(UUID id, String vorname, String nachname, LocalDate geburtsdatum, GeschlechtType geschlecht, Krankenakte krankenakte, List<Termin> termine) {
+    public Patient(final UUID id, final String vorname, final String nachname, final LocalDate geburtsdatum,
+                   final GeschlechtType geschlecht, final Krankenakte krankenakte, final List<Termin> termine) {
         this.id = id;
         this.vorname = vorname;
         this.nachname = nachname;
@@ -25,9 +26,8 @@ public class Patient {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Patient patient)) return false;
-        return Objects.equals(id, patient.id);
+    public boolean equals(final Object other) {
+        return other instanceof Patient patient && Objects.equals(id, patient.id);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Patient {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(final UUID id) {
         this.id = id;
     }
 
@@ -47,7 +47,7 @@ public class Patient {
         return vorname;
     }
 
-    public void setVorname(String vorname) {
+    public void setVorname(final String vorname) {
         this.vorname = vorname;
     }
 
@@ -55,7 +55,7 @@ public class Patient {
         return nachname;
     }
 
-    public void setNachname(String nachname) {
+    public void setNachname(final String nachname) {
         this.nachname = nachname;
     }
 
@@ -63,7 +63,7 @@ public class Patient {
         return geburtsdatum;
     }
 
-    public void setGeburtsdatum(LocalDate geburtsdatum) {
+    public void setGeburtsdatum(final LocalDate geburtsdatum) {
         this.geburtsdatum = geburtsdatum;
     }
 
@@ -71,7 +71,7 @@ public class Patient {
         return geschlecht;
     }
 
-    public void setGeschlecht(GeschlechtType geschlecht) {
+    public void setGeschlecht(final GeschlechtType geschlecht) {
         this.geschlecht = geschlecht;
     }
 
@@ -79,7 +79,7 @@ public class Patient {
         return krankenakte;
     }
 
-    public void setKrankenakte(Krankenakte krankenakte) {
+    public void setKrankenakte(final Krankenakte krankenakte) {
         this.krankenakte = krankenakte;
     }
 
@@ -87,7 +87,7 @@ public class Patient {
         return termine;
     }
 
-    public void setTermine(List<Termin> termine) {
+    public void setTermine(final List<Termin> termine) {
         this.termine = termine;
     }
 

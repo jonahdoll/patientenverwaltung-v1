@@ -2,20 +2,18 @@ package com.acme.patientverwaltung.controller;
 
 import com.acme.patientverwaltung.entity.Patient;
 import com.acme.patientverwaltung.service.PatientService;
+import java.util.Collection;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collection;
-
 @RestController
 @RequestMapping(PatientController.API_PATH)
 public class PatientController {
+    static final String API_PATH = "/patient";
     private final PatientService service;
 
-    static final String API_PATH = "/patient";
-
-    public PatientController(PatientService service) {
+    public PatientController(final PatientService service) {
         this.service = service;
     }
 

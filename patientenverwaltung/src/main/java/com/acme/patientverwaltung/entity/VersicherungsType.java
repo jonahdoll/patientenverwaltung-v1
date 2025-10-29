@@ -2,7 +2,6 @@ package com.acme.patientverwaltung.entity;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
 import java.util.stream.Stream;
 
 public enum VersicherungsType {
@@ -12,10 +11,14 @@ public enum VersicherungsType {
 
     private final String value;
 
-    private VersicherungsType(final String value) { this.value = value; }
+    VersicherungsType(final String value) {
+        this.value = value;
+    }
 
     @JsonValue
-    public String getValue() { return value; }
+    public String getValue() {
+        return value;
+    }
 
     @JsonCreator
     public static VersicherungsType of(final String value) {

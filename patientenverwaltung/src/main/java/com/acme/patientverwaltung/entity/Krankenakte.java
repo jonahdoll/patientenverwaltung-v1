@@ -9,7 +9,8 @@ public class Krankenakte {
     private List<VorerkrankungType> vorerkrankungen;
     private List<MedikamentType> medikamente;
 
-    public Krankenakte(LocalDate erstellungsdatum, BlutgruppeType blutgruppe, List<VorerkrankungType> vorerkrankungen, List<MedikamentType> medikamente) {
+    public Krankenakte(final LocalDate erstellungsdatum, final BlutgruppeType blutgruppe,
+                       final List<VorerkrankungType> vorerkrankungen, final List<MedikamentType> medikamente) {
         this.erstellungsdatum = erstellungsdatum;
         this.blutgruppe = blutgruppe;
         this.vorerkrankungen = vorerkrankungen;
@@ -20,7 +21,7 @@ public class Krankenakte {
         return erstellungsdatum;
     }
 
-    public void setErstellungsdatum(LocalDate erstellungsdatum) {
+    public void setErstellungsdatum(final LocalDate erstellungsdatum) {
         this.erstellungsdatum = erstellungsdatum;
     }
 
@@ -28,7 +29,7 @@ public class Krankenakte {
         return blutgruppe;
     }
 
-    public void setBlutgruppe(BlutgruppeType blutgruppe) {
+    public void setBlutgruppe(final BlutgruppeType blutgruppe) {
         this.blutgruppe = blutgruppe;
     }
 
@@ -36,7 +37,7 @@ public class Krankenakte {
         return vorerkrankungen;
     }
 
-    public void setVorerkrankungen(List<VorerkrankungType> vorerkrankungen) {
+    public void setVorerkrankungen(final List<VorerkrankungType> vorerkrankungen) {
         this.vorerkrankungen = vorerkrankungen;
     }
 
@@ -44,17 +45,13 @@ public class Krankenakte {
         return medikamente;
     }
 
-    public void setMedikamente(List<MedikamentType> medikamente) {
+    public void setMedikamente(final List<MedikamentType> medikamente) {
         this.medikamente = medikamente;
     }
 
     @Override
     public String toString() {
-        return "Krankenakte{" +
-            "erstellungsdatum=" + erstellungsdatum +
-            ", blutgruppe=" + blutgruppe +
-            ", vorerkrankungen=" + vorerkrankungen +
-            ", medikamente=" + medikamente +
-            '}';
+        return "Krankenakte{" + "erstellungsdatum=" + erstellungsdatum + ", blutgruppe=" + blutgruppe + ", " +
+            "vorerkrankungen=" + vorerkrankungen + ", medikamente=" + medikamente + '}';
     }
 }

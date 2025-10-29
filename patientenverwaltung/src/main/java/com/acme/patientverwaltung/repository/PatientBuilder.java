@@ -4,11 +4,11 @@ import com.acme.patientverwaltung.entity.GeschlechtType;
 import com.acme.patientverwaltung.entity.Krankenakte;
 import com.acme.patientverwaltung.entity.Patient;
 import com.acme.patientverwaltung.entity.Termin;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
+@SuppressWarnings({"NullAway.Init", "NotNullFieldNotInitialized", "PMD.AtLeastOneConstructor"})
 public class PatientBuilder {
     private UUID id;
     private String vorname;
@@ -18,7 +18,9 @@ public class PatientBuilder {
     private Krankenakte krankenakte;
     private List<Termin> termine;
 
-    public static PatientBuilder getBuilder() { return new PatientBuilder(); }
+    public static PatientBuilder getBuilder() {
+        return new PatientBuilder();
+    }
 
     public PatientBuilder setId(final UUID id) {
         this.id = id;

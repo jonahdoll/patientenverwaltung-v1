@@ -4,17 +4,19 @@ import com.acme.patientverwaltung.entity.BlutgruppeType;
 import com.acme.patientverwaltung.entity.Krankenakte;
 import com.acme.patientverwaltung.entity.MedikamentType;
 import com.acme.patientverwaltung.entity.VorerkrankungType;
-
 import java.time.LocalDate;
 import java.util.List;
 
+@SuppressWarnings({"NullAway.Init", "NotNullFieldNotInitialized", "PMD.AtLeastOneConstructor"})
 public class KrankenakteBuilder {
     private LocalDate erstellungsdatum;
     private BlutgruppeType blutgruppe;
     private List<VorerkrankungType> vorerkrankungen;
     private List<MedikamentType> medikamente;
 
-    public static KrankenakteBuilder getBuilder() { return new KrankenakteBuilder(); }
+    public static KrankenakteBuilder getBuilder() {
+        return new KrankenakteBuilder();
+    }
 
     public KrankenakteBuilder setErstellungsdatum(final LocalDate erstellungsdatum) {
         this.erstellungsdatum = erstellungsdatum;

@@ -7,7 +7,7 @@ public class Termin {
     private LocalDate datum;
     private LocalTime uhrzeit;
 
-    public Termin(LocalDate datum, LocalTime uhrzeit) {
+    public Termin(final LocalDate datum, final LocalTime uhrzeit) {
         this.datum = datum;
         this.uhrzeit = uhrzeit;
     }
@@ -16,7 +16,7 @@ public class Termin {
         return datum;
     }
 
-    public void setDatum(LocalDate datum) {
+    public void setDatum(final LocalDate datum) {
         this.datum = datum;
     }
 
@@ -24,7 +24,7 @@ public class Termin {
         return uhrzeit;
     }
 
-    public void setUhrzeit(LocalTime uhrzeit) {
+    public void setUhrzeit(final LocalTime uhrzeit) {
         this.uhrzeit = uhrzeit;
     }
 
