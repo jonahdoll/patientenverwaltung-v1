@@ -145,4 +145,4 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=1 \
 
 # Bei CMD statt ENTRYPOINT kann das Kommando bei "docker run ..." ueberschrieben werden
 # Delimitter bei CLASSPATH: ":" bei Unix und ";" bei Windows
-ENTRYPOINT ["java", "--enable-preview", "-classpath", "application.jar:lib/*.jar:.", "com.acme.kunde.Application"]
+ENTRYPOINT ["java", "--enable-preview", "-classpath", "application.jar:lib/*.jar:.", "com.acme.patientverwaltung.Application"]

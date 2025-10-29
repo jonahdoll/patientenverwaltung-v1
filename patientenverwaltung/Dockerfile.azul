@@ -142,4 +142,4 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=1 \
     CMD wget -qO- --no-check-certificate https://localhost:8443/actuator/health/ | grep UP || exit 1
 
 # Bei CMD statt ENTRYPOINT kann das Kommando bei "docker run ..." ueberschrieben werden
-ENTRYPOINT ["java", "--enable-preview", "-classpath", "application.jar:lib/*:.", "com.acme.kunde.Application"]
+ENTRYPOINT ["java", "--enable-preview", "-classpath", "application.jar:lib/*:.", "com.acme.patientverwaltung.Application"]
