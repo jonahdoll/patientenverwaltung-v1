@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-processor/7.2.0.CR1/1969560ddc40f57f838f2560943248b719ea4647/hibernate-processor-7.2.0.CR1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct-processor/1.6.3/52e345c907fbf173b376586c7f8b131d53fa5867/mapstruct-processor-1.6.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/4.0.0-RC1/cafdc763156dd8e6dae5db267ff82fb45fa7ab72/spring-boot-configuration-processor-4.0.0-RC1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uber.nullaway/nullaway/0.12.10/7716f343370130f79c48868eaab48ad537a2dd84/nullaway-0.12.10.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_core/2.43.0/7e1956dc5f126cd3d11dd7310e5b7f56069de01f/error_prone_core-2.43.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_check_api/2.43.0/c0b567e045f9601b0c9d68ab193c50e01f6a53e7/error_prone_check_api-2.43.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotation/2.43.0/f6b6825247bb18f81208b9911b200b9d71d29e71/error_prone_annotation-2.43.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.googlejavaformat/google-java-format/1.27.0/56fe3d456adce24747cb1f8b5c5ef36fde7e1416/google-java-format-1.27.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/1.2.2/9d38f10e22411681cf1d1ee3727e002af19f2c9e/auto-common-1.2.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/33.5.0-jre/8699de25f2f979108d6c1b804a7ba38cda1116bc/guava-33.5.0-jre.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/7.2.0.CR1/325115919cccdd112e8674db4048ee805f867882/hibernate-core-7.2.0.CR1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.models/hibernate-models/1.0.1/3158c5f9309494b905de62c72f6f02d108aea651/hibernate-models-1.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye/jandex/3.3.1/cea8c28faa729cbc00a6d397cf28f12ae9a577f0/jandex-3.3.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/4.0.5/ca84c2a7169b5293e232b9d00d1e4e36d4c3914a/jaxb-runtime-4.0.5.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-core/4.0.5/7b4b11ea5542eea4ad55e1080b23be436795b3/jaxb-core-4.0.5.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/4.0.2/6cd5a999b834b63238005b7144136379dc36cad2/jakarta.xml.bind-api-4.0.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/3.1.1/ec8622148afc5564235d17af80ea80288d0e7f92/jakarta.validation-api-3.1.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/3.0.0/54f928fadec906a99d558536756d171917b9d936/jakarta.annotation-api-3.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.13.2/fc3db6d844df652a3d5db31c87fa12757f13691d/antlr4-runtime-4.13.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.17.6/8c70cbc6950b2ae5291a98d5003e06406d633803/byte-buddy-1.17.6.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.6.1.Final/886afbb445b4016a37c8960a7aef6ebd769ce7e5/jboss-logging-3.6.1.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.3/aeaffd00d57023a2c947393ed251f0354f0985fc/failureaccess-1.0.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jspecify/jspecify/1.0.0/7425a601c1c7ec76645a78d22b8c6a627edee507/jspecify-1.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/3.0.5/3de85488bf535299d5f36d98626605331a10de87/caffeine-3.0.5.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.43.0/a4f9062316c31850b03085e45717f564fd563ceb/error_prone_annotations-2.43.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/3.1/a892ca9507839bbdb900d64310ac98256cab992f/j2objc-annotations-3.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/dataflow-nullaway/3.49.2/53ae9c09d33c52c2d6e79292e86abacdfac22882/dataflow-nullaway-3.49.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pcollections/pcollections/4.0.1/59f3bf5fb28c5f5386804dcf129267416b75d7c/pcollections-4.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.eisop/dataflow-errorprone/3.41.0-eisop1/3fc86eff95c549e42c41fd7c01c2a57ed46a5a94/dataflow-errorprone-3.41.0-eisop1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.9/25a0fcef915f663679fcdb447541c5d86a9be4ba/auto-value-annotations-1.9.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.25.5/5ae5c9ec39930ae9b5a61b32b93288818ec05ec1/protobuf-java-3.25.5.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.service/auto-service-annotations/1.0.1/ac86dacc0eb9285ea9d42eee6aad8629ca3a7432/auto-service-annotations-1.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.persistence/jakarta.persistence-api/3.2.0/bb75a113f3fa191c2c7ee7b206d8e674251b3129/jakarta.persistence-api-3.2.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.transaction/jakarta.transaction-api/2.0.1/51a520e3fae406abb84e2e1148e6746ce3f80a1a/jakarta.transaction-api-2.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.7.0/e98374da1f2143ac8e6e0a95036994bb19137a3/classmate-1.7.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.inject/jakarta.inject-api/2.0.1/4c28afe1991a941d7702fe1362c365f0a8641d1e/jakarta.inject-api-2.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.angus/angus-activation/2.0.2/41f1e0ddd157c856926ed149ab837d110955a9fc/angus-activation-2.0.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/2.1.3/fa165bd70cda600368eee31555222776a46b881f/jakarta.activation-api-2.1.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.49.2/98ac669ccce59dba8ca360d3e07891d62b6b946a/checker-qual-3.49.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.java-diff-utils/java-diff-utils/4.12/1a712a91324d566eef39817fc5c9980eb10c21db/java-diff-utils-4.12.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kevinstern/software-and-algorithms/1.0/5e77666b72c6c5dd583c36148d17fc47f944dfb5/software-and-algorithms-1.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.5/f36a4ef12120a9bb06d766d6a0e54b144fd7ed98/txw2-4.0.5.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/4.1.2/18ec117c85f3ba0ac65409136afa8e42bc74e739/istack-commons-runtime-4.1.2.jar" />
+        </processorPath>
+        <module name="patient.main" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.uber.nullaway/nullaway/0.12.10/7716f343370130f79c48868eaab48ad537a2dd84/nullaway-0.12.10.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_core/2.43.0/7e1956dc5f126cd3d11dd7310e5b7f56069de01f/error_prone_core-2.43.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_check_api/2.43.0/c0b567e045f9601b0c9d68ab193c50e01f6a53e7/error_prone_check_api-2.43.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotation/2.43.0/f6b6825247bb18f81208b9911b200b9d71d29e71/error_prone_annotation-2.43.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.googlejavaformat/google-java-format/1.27.0/56fe3d456adce24747cb1f8b5c5ef36fde7e1416/google-java-format-1.27.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/1.2.2/9d38f10e22411681cf1d1ee3727e002af19f2c9e/auto-common-1.2.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/33.5.0-jre/8699de25f2f979108d6c1b804a7ba38cda1116bc/guava-33.5.0-jre.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.3/aeaffd00d57023a2c947393ed251f0354f0985fc/failureaccess-1.0.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jspecify/jspecify/1.0.0/7425a601c1c7ec76645a78d22b8c6a627edee507/jspecify-1.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ben-manes.caffeine/caffeine/3.0.5/3de85488bf535299d5f36d98626605331a10de87/caffeine-3.0.5.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.43.0/a4f9062316c31850b03085e45717f564fd563ceb/error_prone_annotations-2.43.0.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/3.1/a892ca9507839bbdb900d64310ac98256cab992f/j2objc-annotations-3.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/dataflow-nullaway/3.49.2/53ae9c09d33c52c2d6e79292e86abacdfac22882/dataflow-nullaway-3.49.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.pcollections/pcollections/4.0.1/59f3bf5fb28c5f5386804dcf129267416b75d7c/pcollections-4.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.eisop/dataflow-errorprone/3.41.0-eisop1/3fc86eff95c549e42c41fd7c01c2a57ed46a5a94/dataflow-errorprone-3.41.0-eisop1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.9/25a0fcef915f663679fcdb447541c5d86a9be4ba/auto-value-annotations-1.9.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.25.5/5ae5c9ec39930ae9b5a61b32b93288818ec05ec1/protobuf-java-3.25.5.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.service/auto-service-annotations/1.0.1/ac86dacc0eb9285ea9d42eee6aad8629ca3a7432/auto-service-annotations-1.0.1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.49.2/98ac669ccce59dba8ca360d3e07891d62b6b946a/checker-qual-3.49.2.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.java-diff-utils/java-diff-utils/4.12/1a712a91324d566eef39817fc5c9980eb10c21db/java-diff-utils-4.12.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kevinstern/software-and-algorithms/1.0/5e77666b72c6c5dd583c36148d17fc47f944dfb5/software-and-algorithms-1.0.jar" />
+        </processorPath>
+        <module name="patient.test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kunde" target="25" />
+      <module name="kunde.main" target="25" />
+      <module name="kunde.test" target="25" />
+      <module name="patientenverwaltung" target="25" />
+      <module name="patientenverwaltung.main" target="25" />
+      <module name="patientenverwaltung.test" target="25" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="kunde" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview &quot;-Xplugin:ErrorProne -XepCompilingTestOnlyCode -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:VariableNameSameAsType:OFF -XepOpt:NullAway:HandleTestAssertionLibraries=true&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+      <module name="kunde.main" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview --add-opens --add-exports &quot;-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -XepExcludedPaths:.*/build/generated/.* -Xep:NullAway:ERROR -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:MissingSummary:OFF&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+      <module name="kunde.test" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview &quot;-Xplugin:ErrorProne -XepCompilingTestOnlyCode -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:VariableNameSameAsType:OFF -XepOpt:NullAway:HandleTestAssertionLibraries=true&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+      <module name="patient" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview &quot;-Xplugin:ErrorProne -XepCompilingTestOnlyCode -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:VariableNameSameAsType:OFF -XepOpt:NullAway:HandleTestAssertionLibraries=true&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+      <module name="patient.main" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview --add-opens --add-exports &quot;-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -XepExcludedPaths:.*/build/generated/.* -Xep:NullAway:ERROR -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:MissingSummary:OFF&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+      <module name="patient.test" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview &quot;-Xplugin:ErrorProne -XepCompilingTestOnlyCode -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:VariableNameSameAsType:OFF -XepOpt:NullAway:HandleTestAssertionLibraries=true&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+      <module name="patientenverwaltung" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview &quot;-Xplugin:ErrorProne -XepCompilingTestOnlyCode -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:VariableNameSameAsType:OFF -XepOpt:NullAway:HandleTestAssertionLibraries=true&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+      <module name="patientenverwaltung.main" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview --add-opens --add-exports &quot;-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -XepExcludedPaths:.*/build/generated/.* -Xep:NullAway:ERROR -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:MissingSummary:OFF&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+      <module name="patientenverwaltung.test" options="-parameters --enable-preview -Xlint:all,-serial,-processing,-preview &quot;-Xplugin:ErrorProne -XepCompilingTestOnlyCode -XepOpt:NullAway:OnlyNullMarked=true -XepOpt:NullAway:JSpecifyMode=true -Xep:VariableNameSameAsType:OFF -XepOpt:NullAway:HandleTestAssertionLibraries=true&quot; -XDcompilePolicy=simple -XDshould-stop.ifError=FLOW -XDshouldStopPolicyIfError=FLOW" />
+    </option>
+  </component>
+</project>
