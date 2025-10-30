@@ -8,6 +8,7 @@ import java.time.LocalTime;
 public class TerminBuilder {
     private LocalDate datum;
     private LocalTime uhrzeit;
+    private String grund;
 
     public static TerminBuilder getBuilder() {
         return new TerminBuilder();
@@ -23,7 +24,12 @@ public class TerminBuilder {
         return this;
     }
 
+    public TerminBuilder setGrund(final String grund) {
+        this.grund = grund;
+        return this;
+    }
+
     public Termin build() {
-        return new Termin(datum, uhrzeit);
+        return new Termin(datum, uhrzeit, grund);
     }
 }

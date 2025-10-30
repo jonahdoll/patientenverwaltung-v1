@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(PatientController.API_PATH)
+@RequestMapping(path = PatientController.API_PATH, version = "1.0.0" )
 public class PatientController {
-    static final String API_PATH = "/patient";
+    static final String API_PATH = "/patienten";
     private final PatientService service;
 
     public PatientController(final PatientService service) {

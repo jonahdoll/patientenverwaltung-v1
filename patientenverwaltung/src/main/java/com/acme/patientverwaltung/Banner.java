@@ -39,11 +39,12 @@ final class Banner {
 
     // http://patorjk.com/software/taag/#p=display&f=Slant&t=kunde%202025.10.1
     private static final String FIGLET = """
-            __                   __        ___   ____ ___   ______ _______   ___
-           / /____  ______  ____/ /__     |__ \\ / __ \\__ \\ / ____/<  / __ \\ <  /
-          / //_/ / / / __ \\/ __  / _ \\    __/ // / / /_/ //___ \\  / / / / / / /\s
-         / ,< / /_/ / / / / /_/ /  __/   / __// /_/ / __/____/ / / / /_/ / / / \s
-        /_/|_|\\__,_/_/ /_/\\__,_/\\___/   /____/\\____/____/_____(_)_/\\____(_)_/
+                         __  _            __                                           ____                       ___   ____ ___   ______ _______   _____ ____\s
+            ____  ____ _/ /_(_)__  ____  / /____  ____ _   _____  ______      ______ _/ / /___  ______  ____ _   |__ \\ / __ \\__ \\ / ____/<  / __ \\ |__  // __ \\
+           / __ \\/ __ `/ __/ / _ \\/ __ \\/ __/ _ \\/ __ \\ | / / _ \\/ ___/ | /| / / __ `/ / __/ / / / __ \\/ __ `/   __/ // / / /_/ //___ \\  / / / / /  /_ </ / / /
+          / /_/ / /_/ / /_/ /  __/ / / / /_/  __/ / / / |/ /  __/ /   | |/ |/ / /_/ / / /_/ /_/ / / / / /_/ /   / __// /_/ / __/____/ / / / /_/ / ___/ / /_/ /\s
+         / .___/\\__,_/\\__/_/\\___/_/ /_/\\__/\\___/_/ /_/|___/\\___/_/    |__/|__/\\__,_/_/\\__/\\__,_/_/ /_/\\__, /   /____/\\____/____/_____(_)_/\\____(_)____/\\____/ \s
+        /_/                                                                                          /____/                                                   \s
         """;
     private static final String SERVICE_HOST = System.getenv("KUNDE_SERVICE_HOST");
     private static final String KUBERNETES = SERVICE_HOST == null
@@ -56,7 +57,7 @@ final class Banner {
     static final String TEXT = """
 
         $figlet
-        (C) Juergen Zimmermann, Hochschule Karlsruhe
+        (C) Jonah Doll & Juergen Zimmermann, Hochschule Karlsruhe
         Version             2025.10.1
         Spring Boot         $springBoot
         Spring Framework    $spring

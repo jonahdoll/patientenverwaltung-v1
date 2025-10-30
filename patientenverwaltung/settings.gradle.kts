@@ -15,4 +15,4 @@ pluginManagement {
 
 // buildCache { local { directory = "C:/Z/caches" } }
 
-rootProject.name = "patient"
+rootProject.name = "patientenverwaltung"

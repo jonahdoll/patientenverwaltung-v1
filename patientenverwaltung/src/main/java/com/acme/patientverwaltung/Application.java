@@ -21,7 +21,6 @@ import com.acme.patientverwaltung.config.WebConfig;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportRuntimeHints;
 import static com.acme.patientverwaltung.Banner.TEXT;
 
 /// Klasse mit der `main`-Methode für die Anwendung auf Basis von _Spring Boot_.
@@ -29,7 +28,6 @@ import static com.acme.patientverwaltung.Banner.TEXT;
 /// @author [Jürgen Zimmermann](mailto:Juergen.Zimmermann@h-ka.de)
 @SpringBootApplication(proxyBeanMethods = false)
 @Import({WebConfig.class, DevConfig.class})
-@ImportRuntimeHints(GraalVmHints.class)
 @SuppressWarnings({"ImplicitSubclassInspection", "ClassUnconnectedToPackage"})
 public final class Application {
     private Application() {

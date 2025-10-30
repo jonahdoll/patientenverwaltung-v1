@@ -1,15 +1,15 @@
 package com.acme.patientverwaltung.service;
 
 import com.acme.patientverwaltung.entity.Patient;
-import com.acme.patientverwaltung.repository.PatientenRepository;
+import com.acme.patientverwaltung.repository.PatientRepository;
 import java.util.Collection;
 import org.springframework.stereotype.Service;
 
 @Service
 public class PatientService {
-    private final PatientenRepository repo;
+    private final PatientRepository repo;
 
-    public PatientService(final PatientenRepository repo) {
+    public PatientService(final PatientRepository repo) {
         this.repo = repo;
     }
 

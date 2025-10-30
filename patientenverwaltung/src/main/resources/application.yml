@@ -69,7 +69,7 @@ server:
   shutdown: graceful
 
 spring:
-  application.name: kunde
+  application.name: patientenverwaltung
   aop.proxy-target-class: false
 
   # ==============================================================================

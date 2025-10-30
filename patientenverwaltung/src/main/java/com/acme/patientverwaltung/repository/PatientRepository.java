@@ -6,9 +6,9 @@ import org.springframework.stereotype.Repository;
 import static com.acme.patientverwaltung.repository.MockDB.PATIENTEN;
 
 @Repository
-public class PatientenRepository {
+public class PatientRepository {
 
-    public PatientenRepository() {
+    public PatientRepository() {
     }
 
     public Collection<Patient> findAll() {
