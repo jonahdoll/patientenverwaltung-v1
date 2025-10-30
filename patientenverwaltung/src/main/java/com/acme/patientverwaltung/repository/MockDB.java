@@ -4,6 +4,7 @@ import com.acme.patientverwaltung.entity.Patient;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -31,8 +32,8 @@ final class MockDB {
                     .setKrankenakte(KrankenakteBuilder.getBuilder()
                         .setBlutgruppe(GRUPPE_B)
                         .setErstellungsdatum(LocalDate.of(2025, 10, 29))
-                        .setMedikamente(List.of(SIMVASTATIN))
-                        .setVorerkrankungen(List.of(SCHLAGANFALL))
+                        .setMedikamente(Set.of(SIMVASTATIN))
+                        .setVorerkrankungen(Set.of(SCHLAGANFALL))
                         .build())
                     .setTermine(List.of(TerminBuilder.getBuilder()
                         .setDatum(LocalDate.of(2025, 10, 30))
@@ -48,8 +49,8 @@ final class MockDB {
                     .setKrankenakte(KrankenakteBuilder.getBuilder()
                         .setBlutgruppe(GRUPPE_B)
                         .setErstellungsdatum(LocalDate.of(2025, 10, 29))
-                        .setMedikamente(List.of(IBUPROFEN))
-                        .setVorerkrankungen(List.of(RUECKENSCHMERZEN))
+                        .setMedikamente(Set.of(IBUPROFEN))
+                        .setVorerkrankungen(Set.of(RUECKENSCHMERZEN))
                         .build())
                     .setTermine(List.of(TerminBuilder.getBuilder()
                         .setDatum(LocalDate.of(2025, 10, 31))
@@ -65,8 +66,8 @@ final class MockDB {
                     .setKrankenakte(KrankenakteBuilder.getBuilder()
                         .setBlutgruppe(GRUPPE_A)
                         .setErstellungsdatum(LocalDate.of(2025, 10, 29))
-                        .setMedikamente(List.of(IBUPROFEN))
-                        .setVorerkrankungen(List.of(RUECKENSCHMERZEN))
+                        .setMedikamente(Set.of(IBUPROFEN))
+                        .setVorerkrankungen(Set.of(RUECKENSCHMERZEN))
                         .build())
                     .setTermine(List.of(TerminBuilder.getBuilder()
                         .setDatum(LocalDate.of(2025, 10, 31))

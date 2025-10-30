@@ -1,16 +1,16 @@
 package com.acme.patientverwaltung.entity;
 
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 public class Krankenakte {
     private LocalDate erstellungsdatum;
     private BlutgruppeType blutgruppe;
-    private List<VorerkrankungType> vorerkrankungen;
-    private List<MedikamentType> medikamente;
+    private Set<VorerkrankungType> vorerkrankungen;
+    private Set<MedikamentType> medikamente;
 
     public Krankenakte(final LocalDate erstellungsdatum, final BlutgruppeType blutgruppe,
-                       final List<VorerkrankungType> vorerkrankungen, final List<MedikamentType> medikamente) {
+                       final Set<VorerkrankungType> vorerkrankungen, final Set<MedikamentType> medikamente) {
         this.erstellungsdatum = erstellungsdatum;
         this.blutgruppe = blutgruppe;
         this.vorerkrankungen = vorerkrankungen;
@@ -33,19 +33,19 @@ public class Krankenakte {
         this.blutgruppe = blutgruppe;
     }
 
-    public List<VorerkrankungType> getVorerkrankungen() {
+    public Set<VorerkrankungType> getVorerkrankungen() {
         return vorerkrankungen;
     }
 
-    public void setVorerkrankungen(final List<VorerkrankungType> vorerkrankungen) {
+    public void setVorerkrankungen(final Set<VorerkrankungType> vorerkrankungen) {
         this.vorerkrankungen = vorerkrankungen;
     }
 
-    public List<MedikamentType> getMedikamente() {
+    public Set<MedikamentType> getMedikamente() {
         return medikamente;
     }
 
-    public void setMedikamente(final List<MedikamentType> medikamente) {
+    public void setMedikamente(final Set<MedikamentType> medikamente) {
         this.medikamente = medikamente;
     }
 

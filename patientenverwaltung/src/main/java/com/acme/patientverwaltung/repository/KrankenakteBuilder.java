@@ -5,14 +5,14 @@ import com.acme.patientverwaltung.entity.Krankenakte;
 import com.acme.patientverwaltung.entity.MedikamentType;
 import com.acme.patientverwaltung.entity.VorerkrankungType;
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
-@SuppressWarnings({"NullAway.Init", "NotNullFieldNotInitialized", "PMD.AtLeastOneConstructor"})
+@SuppressWarnings({"NullAway.Init", "PMD.AtLeastOneConstructor"})
 public class KrankenakteBuilder {
     private LocalDate erstellungsdatum;
     private BlutgruppeType blutgruppe;
-    private List<VorerkrankungType> vorerkrankungen;
-    private List<MedikamentType> medikamente;
+    private Set<VorerkrankungType> vorerkrankungen;
+    private Set<MedikamentType> medikamente;
 
     public static KrankenakteBuilder getBuilder() {
         return new KrankenakteBuilder();
@@ -28,12 +28,12 @@ public class KrankenakteBuilder {
         return this;
     }
 
-    public KrankenakteBuilder setVorerkrankungen(final List<VorerkrankungType> vorerkrankungen) {
+    public KrankenakteBuilder setVorerkrankungen(final Set<VorerkrankungType> vorerkrankungen) {
         this.vorerkrankungen = vorerkrankungen;
         return this;
     }
 
-    public KrankenakteBuilder setMedikamente(final List<MedikamentType> medikamente) {
+    public KrankenakteBuilder setMedikamente(final Set<MedikamentType> medikamente) {
         this.medikamente = medikamente;
         return this;
     }
