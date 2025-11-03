@@ -140,9 +140,6 @@ spring:
 
   main.lazy-initialization: true
   mvc:
-    apiversion:
-      default: 1.0.0
-      use.header: X-Version
     contentnegotiation.default-content-types: [application/json]
     problemdetails.enabled: true
 
