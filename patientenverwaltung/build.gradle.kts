@@ -572,7 +572,6 @@ tasks.named<JavaCompile>("compileTestJava") {
 
 tasks.named("bootJar", BootJar::class.java) {
     // in src/main/resources/
-    exclude("private-key.pem", "certificate.crt", ".reloadtrigger")
 
     doLast {
         // CDS = Class Data Sharing seit Spring Boot 3.3.0
@@ -679,7 +678,7 @@ tasks.named("bootBuildImage", BootBuildImage::class.java) {
             // https://github.com/paketo-buildpacks/azul-zulu/releases
             buildpacks =
                 listOf(
-                    //"paketo-buildpacks/ca-certificates",
+                    "paketo-buildpacks/ca-certificates",
                     "paketobuildpacks/azul-zulu",
                     "paketobuildpacks/java",
                 )

@@ -394,8 +394,8 @@ spring:
   config.activate.on-profile: native
   ssl.bundle.pem.microservice:
     keystore:
-      private-key: ./private-key.pem
-      certificate: ./certificate.crt
+      private-key: classpath:private-key.pem
+      certificate: classpath:certificate.crt
     truststore:
-      certificate: ./certificate.crt
+      certificate: classpath:certificate.crt
 logging.file.name: ./application.log

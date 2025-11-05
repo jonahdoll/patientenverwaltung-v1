@@ -51,7 +51,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/txw2/4.0.5/f36a4ef12120a9bb06d766d6a0e54b144fd7ed98/txw2-4.0.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-runtime/4.1.2/18ec117c85f3ba0ac65409136afa8e42bc74e739/istack-commons-runtime-4.1.2.jar" />
         </processorPath>
-        <module name="patient.main" />
+        <module name="patientenverwaltung.main" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -80,16 +80,13 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.java-diff-utils/java-diff-utils/4.12/1a712a91324d566eef39817fc5c9980eb10c21db/java-diff-utils-4.12.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kevinstern/software-and-algorithms/1.0/5e77666b72c6c5dd583c36148d17fc47f944dfb5/software-and-algorithms-1.0.jar" />
         </processorPath>
-        <module name="patient.test" />
+        <module name="patientenverwaltung.test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="kunde" target="25" />
       <module name="kunde.main" target="25" />
       <module name="kunde.test" target="25" />
-      <module name="patientenverwaltung" target="25" />
-      <module name="patientenverwaltung.main" target="25" />
-      <module name="patientenverwaltung.test" target="25" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

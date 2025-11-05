@@ -3,6 +3,7 @@ package com.acme.patientverwaltung.service;
 import com.acme.patientverwaltung.entity.Patient;
 import com.acme.patientverwaltung.repository.PatientRepository;
 import java.util.Collection;
+import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
@@ -23,8 +24,8 @@ public class PatientService {
         return patient;
     }
 
-    public Collection<Patient> findAll() {
-        final var patienten = repo.findAll();
+    public Collection<Patient> find(final Map<String, String> queryparam) {
+        final var patienten = repo.find(queryparam);
         if (patienten == null) {
             throw new NotFoundException();
         }
