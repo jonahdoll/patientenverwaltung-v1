@@ -28,7 +28,7 @@ const chart = resolve('..', 'helm', 'kunde');
 const version = '2025.10.1';
 const config = new Config();
 const namespace = config.get('k8sNamespace') || 'default';
-const devYamlFile = resolve('dev', 'kunde.yaml');
+const devYamlFile = resolve('dev', 'patientenverwaltung.yaml');
 const provider = new Provider('docker-desktop', {
     // https://nodejs.org/api/fs.html#fspromisesreadfilepath-options
     // "await" wie in C#

@@ -5,7 +5,6 @@ import com.acme.patientverwaltung.repository.PatientRepository;
 import java.util.Collection;
 import java.util.Map;
 import java.util.UUID;
-
 import org.springframework.stereotype.Service;
 
 @Service

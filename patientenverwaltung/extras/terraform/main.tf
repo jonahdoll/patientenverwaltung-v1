@@ -45,13 +45,13 @@ terraform {
 variable "helm_release" {
     description = "Name fuer das Helm-Release"
     type        = string
-    default     = "kunde"
+    default     = "patientenverwaltung"
 }
 
 variable "helm_chart" {
     description = "Pfad zum lokalen Helm-Chart"
     type        = string
-    default     = "../helm/kunde"
+    default     = "../helm/patientenverwaltung"
 }
 
 variable "helm_chart_version" {
@@ -69,7 +69,7 @@ variable "namespace" {
 variable "dev_values" {
     description = "Pfad zur YAML-Datei mit Werten fuer Development"
     type        = string
-    default     = "dev/kunde.yaml"
+    default     = "dev/patientenverwaltung.yaml"
 }
 
 variable "timeout_app" {
@@ -109,7 +109,7 @@ provider "helm" {
 ###############################################################################
 
 # https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release#example-usage---local-chart
-resource "helm_release" "kunde" {
+resource "helm_release" "patientenverwaltung" {
     name = var.helm_release
     chart = var.helm_chart
     version = var.helm_chart_version
