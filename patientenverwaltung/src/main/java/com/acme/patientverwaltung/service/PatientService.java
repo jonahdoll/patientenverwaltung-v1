@@ -25,7 +25,7 @@ public class PatientService {
 
     public Collection<Patient> find(final Map<String, String> queryparam) {
         final var patienten = repo.find(queryparam);
-        if (patienten == null) {
+        if (patienten.isEmpty()) {
             throw new NotFoundException();
         }
         return patienten;
