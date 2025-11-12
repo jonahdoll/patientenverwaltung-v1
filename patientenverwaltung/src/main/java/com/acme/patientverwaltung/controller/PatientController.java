@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import static com.acme.patientverwaltung.controller.Constants.API_PATH;
+import static com.acme.patientverwaltung.controller.Constants.ID_PATTERN;
 
 @RestController
-@RequestMapping(PatientController.API_PATH)
+@RequestMapping(API_PATH)
 class PatientController {
-    static final String API_PATH = "/patienten";
-    static final String ID_PATTERN = "[\\da-f]{8}-[\\da-f]{4}-[\\da-f]{4}-[\\da-f]{4}-[\\da-f]{12}";
+
     private final PatientService service;
 
     PatientController(final PatientService service) {

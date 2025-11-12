@@ -1,33 +1,22 @@
 package com.acme.patientverwaltung.entity;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class Termin {
-    private LocalDate datum;
-    private LocalTime uhrzeit;
+    private LocalDateTime startZeitpunkt;
     private String grund;
 
-    public Termin(final LocalDate datum, final LocalTime uhrzeit, final  String grund) {
-        this.datum = datum;
-        this.uhrzeit = uhrzeit;
+    public Termin(final LocalDateTime startZeitpunkt, final String grund) {
+        this.startZeitpunkt = startZeitpunkt;
         this.grund = grund;
     }
 
-    public LocalDate getDatum() {
-        return datum;
+    public LocalDateTime getStartZeitpunkt() {
+        return startZeitpunkt;
     }
 
-    public void setDatum(final LocalDate datum) {
-        this.datum = datum;
-    }
-
-    public LocalTime getUhrzeit() {
-        return uhrzeit;
-    }
-
-    public void setUhrzeit(final LocalTime uhrzeit) {
-        this.uhrzeit = uhrzeit;
+    public void setStartZeitpunkt(final LocalDateTime startZeitpunkt) {
+        this.startZeitpunkt = startZeitpunkt;
     }
 
     public String getGrund() {
@@ -41,8 +30,7 @@ public class Termin {
     @Override
     public String toString() {
         return "Termin{" +
-            "datum=" + datum +
-            ", uhrzeit=" + uhrzeit +
+            "startZeitpunkt=" + startZeitpunkt +
             ", grund='" + grund + '\'' +
             '}';
     }

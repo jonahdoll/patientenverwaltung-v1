@@ -1,26 +1,19 @@
 package com.acme.patientverwaltung.repository;
 
 import com.acme.patientverwaltung.entity.Termin;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 @SuppressWarnings({"NullAway.Init", "NotNullFieldNotInitialized", "PMD.AtLeastOneConstructor"})
 public class TerminBuilder {
-    private LocalDate datum;
-    private LocalTime uhrzeit;
+    private LocalDateTime startZeitpunkt;
     private String grund;
 
     public static TerminBuilder getBuilder() {
         return new TerminBuilder();
     }
 
-    public TerminBuilder setDatum(final LocalDate datum) {
-        this.datum = datum;
-        return this;
-    }
-
-    public TerminBuilder setUhrzeit(final LocalTime uhrzeit) {
-        this.uhrzeit = uhrzeit;
+    public TerminBuilder setStartZeitpunkt(final LocalDateTime startZeitpunkt) {
+        this.startZeitpunkt = startZeitpunkt;
         return this;
     }
 
@@ -30,6 +23,6 @@ public class TerminBuilder {
     }
 
     public Termin build() {
-        return new Termin(datum, uhrzeit, grund);
+        return new Termin(startZeitpunkt, grund);
     }
 }

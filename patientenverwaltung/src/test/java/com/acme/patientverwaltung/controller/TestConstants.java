@@ -35,7 +35,8 @@ final class TestConstants {
         //              ...in-java-what-is-the-simplest-way-to-create-an-sslcontext-with-just-a-pem-file#answer-61680878
         final SSLContext sslContext;
         try (var certificateStream = Files.lines(path)) {
-            final var certificateBytes = certificateStream.collect(Collectors.joining("\n")).getBytes(UTF_8);
+            final var certificateBytes = certificateStream.collect(Collectors.joining("\n"))
+                .getBytes(UTF_8);
             // https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/security/cert/CertificateFactory.html
             final var certificateFactory = CertificateFactory.getInstance("X.509");
             final var certificate = certificateFactory.generateCertificate(new ByteArrayInputStream(certificateBytes));

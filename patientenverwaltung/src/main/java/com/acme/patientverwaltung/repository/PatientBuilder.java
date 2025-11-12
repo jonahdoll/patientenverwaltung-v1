@@ -13,6 +13,7 @@ public class PatientBuilder {
     private UUID id;
     private String vorname;
     private String nachname;
+    private String email;
     private LocalDate geburtsdatum;
     private GeschlechtType geschlecht;
     private Krankenakte krankenakte;
@@ -37,6 +38,11 @@ public class PatientBuilder {
         return this;
     }
 
+    public PatientBuilder setEmail(final String email) {
+        this.email = email;
+        return this;
+    }
+
     public PatientBuilder setGeburtsdatum(final LocalDate geburtsdatum) {
         this.geburtsdatum = geburtsdatum;
         return this;
@@ -58,6 +64,6 @@ public class PatientBuilder {
     }
 
     public Patient build() {
-        return new Patient(id, vorname, nachname, geburtsdatum, geschlecht, krankenakte, termine);
+        return new Patient(id, vorname, nachname, email, geburtsdatum, geschlecht, krankenakte, termine);
     }
 }

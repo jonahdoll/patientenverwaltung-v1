@@ -9,16 +9,20 @@ public class Patient {
     private UUID id;
     private String vorname;
     private String nachname;
+    private String email;
     private LocalDate geburtsdatum;
     private GeschlechtType geschlecht;
     private Krankenakte krankenakte;
     private List<Termin> termine;
 
-    public Patient(final UUID id, final String vorname, final String nachname, final LocalDate geburtsdatum,
+    @SuppressWarnings("ParameterNumber")
+    public Patient(final UUID id, final String vorname, final String nachname, final String email,
+                   final LocalDate geburtsdatum,
                    final GeschlechtType geschlecht, final Krankenakte krankenakte, final List<Termin> termine) {
         this.id = id;
         this.vorname = vorname;
         this.nachname = nachname;
+        this.email = email;
         this.geburtsdatum = geburtsdatum;
         this.geschlecht = geschlecht;
         this.krankenakte = krankenakte;
@@ -59,6 +63,14 @@ public class Patient {
         this.nachname = nachname;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(final String email) {
+        this.email = email;
+    }
+
     public LocalDate getGeburtsdatum() {
         return geburtsdatum;
     }
@@ -97,6 +109,7 @@ public class Patient {
             "id=" + id +
             ", vorname='" + vorname + '\'' +
             ", nachname='" + nachname + '\'' +
+            ", email='" + email + '\'' +
             ", geburtsdatum=" + geburtsdatum +
             ", geschlecht=" + geschlecht +
             ", krankenakte=" + krankenakte +

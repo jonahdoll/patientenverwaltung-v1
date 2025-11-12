@@ -19,7 +19,8 @@ import org.springframework.web.client.RestClient;
 import org.springframework.web.client.support.RestClientAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 import org.springframework.web.util.UriComponentsBuilder;
-import static com.acme.patientverwaltung.controller.PatientController.API_PATH;
+
+import static com.acme.patientverwaltung.controller.Constants.API_PATH;
 import static com.acme.patientverwaltung.controller.TestConstants.HOST;
 import static com.acme.patientverwaltung.controller.TestConstants.REQUEST_FACTORY;
 import static com.acme.patientverwaltung.controller.TestConstants.SCHEMA;
