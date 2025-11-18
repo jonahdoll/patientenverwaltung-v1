@@ -1,0 +1,67 @@
+' Copyright (C) 2019 - present Juergen Zimmermann, Hochschule Karlsruhe
+'
+' This program is free software: you can redistribute it and/or modify
+' it under the terms of the GNU General Public License as published by
+' the Free Software Foundation, either version 3 of the License, or
+' (at your option) any later version.
+'
+' This program is distributed in the hope that it will be useful,
+' but WITHOUT ANY WARRANTY; without even the implied warranty of
+' MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+' GNU General Public License for more details.
+'
+' You should have received a copy of the GNU General Public License
+' along with this program.  If not, see <https://www.gnu.org/licenses/>.
+@startuml PatientService
+
+skinparam classAttributeIconSize 0
+
+package org.springframework.stereotype {
+    annotation Service
+}
+
+package java.util {
+    interface List<T>
+    interface Map<K,V>
+    class UUID
+
+    UUID .left[hidden].> Service
+}
+
+package com.acme.patientenverwaltung {
+    package entity {
+        class Patient << entity >>
+
+        Patient .up[hidden].> List
+    }
+
+    package repository {
+        class PatientRepository << control >> << @Repository >>
+    }
+
+    package service #DDDDDD {
+        ' TODO Gradle: "exception" wird erst AsciiDoctor_plugin 5.x unterstuetzt
+        exception NotFoundException
+
+        class PatientService << control >> << @Service >> {
+            + findById(id: UUID): Patient
+            + find(queryParams: Map<String, String>): List<Patient>
+        }
+
+        PatientService o--> PatientRepository : repo
+
+        PatientService .right.> Patient
+        PatientService ..> Service
+        PatientService .up.> UUID
+        PatientService .up> List
+        PatientService .up.> Map
+
+        PatientService ..> NotFoundException
+    }
+}
+
+hide empty members
+
+footer (c) Jonah Doll, Jürgen Zimmermann
+
+@enduml
