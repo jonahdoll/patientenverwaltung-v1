@@ -3,6 +3,9 @@ package com.acme.patientverwaltung.entity;
 import java.time.LocalDate;
 import java.util.List;
 
+/// Krankenakte eines Patienten
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 public class Krankenakte {
     private LocalDate erstellungsdatum;
     private BlutgruppeType blutgruppe;

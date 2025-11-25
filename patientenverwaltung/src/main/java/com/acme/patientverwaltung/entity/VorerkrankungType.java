@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.stream.Stream;
 
+/// Enum für Vorerkrankungen.
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 public enum VorerkrankungType {
     HERZKRANKHEIT("H"),
 

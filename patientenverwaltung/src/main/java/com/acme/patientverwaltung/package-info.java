@@ -15,5 +15,5 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/// Microservice _kunde_.
+/// Microservice _patientenverwaltung_.
 package com.acme.patientverwaltung;

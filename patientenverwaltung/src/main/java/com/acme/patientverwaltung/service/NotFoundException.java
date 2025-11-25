@@ -5,6 +5,7 @@ import java.util.UUID;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/// [RuntimeException], falls kein Patient gefunden wurde.
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public final class NotFoundException extends RuntimeException {
     @Serial

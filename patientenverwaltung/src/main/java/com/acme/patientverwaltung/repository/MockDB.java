@@ -16,6 +16,9 @@ import static com.acme.patientverwaltung.entity.MedikamentType.SIMVASTATIN;
 import static com.acme.patientverwaltung.entity.VorerkrankungType.RUECKENSCHMERZEN;
 import static com.acme.patientverwaltung.entity.VorerkrankungType.SCHLAGANFALL;
 
+/// Emulation der Datenbasis für persistente Patienten.
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 @SuppressWarnings({"UtilityClassCanBeEnum", "UtilityClass", "MagicNumber", "RedundantSuppression", "java:S1192"})
 final class MockDB {
     static final List<Patient> PATIENTEN;

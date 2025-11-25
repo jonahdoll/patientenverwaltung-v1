@@ -8,6 +8,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+/// Geschäftslogik für Patienten
+/// ![Klassendiagramm](../../../../../asciidoc/PatientWriteService.svg)
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 @Service
 public class PatientWriteService {
     private final PatientRepository repo;

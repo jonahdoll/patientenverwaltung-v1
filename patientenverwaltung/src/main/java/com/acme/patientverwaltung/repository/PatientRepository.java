@@ -16,6 +16,9 @@ import org.springframework.stereotype.Repository;
 import static com.acme.patientverwaltung.repository.MockDB.PATIENTEN;
 import static java.util.UUID.randomUUID;
 
+/// Repository für den DB-Zugriff bei Patienten.
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 @Repository
 public class PatientRepository {
     private final StableValue<Logger> logger = StableValue.of();

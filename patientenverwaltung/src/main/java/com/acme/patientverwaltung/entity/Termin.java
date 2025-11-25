@@ -2,6 +2,9 @@ package com.acme.patientverwaltung.entity;
 
 import java.time.LocalDateTime;
 
+/// Zeitpunkt und Grund für den Termin eines Patienten
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 public class Termin {
     private LocalDateTime startZeitpunkt;
     private String grund;

@@ -30,9 +30,14 @@ import static org.springframework.http.HttpStatus.NO_CONTENT;
 import static org.springframework.http.HttpStatus.UNPROCESSABLE_CONTENT;
 import static org.springframework.http.ResponseEntity.created;
 
+/// Ein Controller zum Anlegen/Ändern von Patienten
+/// ![Klassendiagramm](../../../../../asciidoc/PatientWriteController.svg)
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 @Controller
 @Validated
 @RequestMapping(API_PATH)
+@SuppressWarnings("ClassFanOutComplexity")
 class PatientWriteController {
     private static final String NEUANLEGEN_TAG = "Neuanlegen";
     private static final String AKTUALISIEREN_TAG = "Aktualisieren";

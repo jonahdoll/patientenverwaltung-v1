@@ -1,0 +1,98 @@
+@startuml KundeWriteController
+
+skinparam classAttributeIconSize 0
+
+package org.springframework {
+package stereotype {
+        annotation Controller
+    }
+
+    package web {
+        interface ErrorResponse
+
+        package bind {
+            class MethodArgumentNotValidException
+
+            package annotation {
+                annotation RequestMapping
+                annotation PathVariable
+                annotation RequestBody
+                annotation ExceptionHandler
+            }
+
+            RequestMapping .down[hidden].> MethodArgumentNotValidException
+            PathVariable .right[hidden].> RequestMapping
+            Controller .right[hidden].> PathVariable
+        }
+    }
+
+    package http {
+        class ResponseEntity<T>
+
+        package converter {
+            class HttpMessageNotReadableException
+        }
+    }
+}
+
+package jakarta.servlet.http {
+    interface HttpServletRequest
+
+    HttpMessageNotReadableException .down[hidden].> HttpServletRequest
+}
+
+package java.util {
+    interface Collection<T>
+    class UUID
+
+    UUID .up[hidden].> Collection
+    Collection .up[hidden].> HttpServletRequest
+}
+
+package com.acme.patientenverwaltung {
+    package service {
+        class PatientWriteService << control >> << @Service >>
+
+        class EmailExistsException
+    }
+
+    package rest #DDDDDD {
+        class PatientDTO <<entity>>
+
+        class PatientWriteController << boundary >> << @Controller >> << @RequestMapping >> {
+            ~ @PostMapping post(@RequestBody PatientDTO: PatientDTO, request: HttpServletRequest): ResponseEntity<Void>
+            ~ @PutMapping put(@PathVariable id: UUID, @RequestBody PatientDTO: PatientDTO)
+
+            ~ @ExceptionHandler onConstraintViolations(ex: MethodArgumentNotValidException): ErrorResponse
+            ~ @ExceptionHandler onEmailExists(ex: EmailExistsException): ErrorResponse
+            ~ @ExceptionHandler onMessageNotReadable(ex: HttpMessageNotReadableException): ErrorResponse
+        }
+
+        PatientWriteController o-down-> "1" PatientWriteService : service
+        PatinetWriteController ..> PatientDTO
+        PatientWriteController ..> EmailExistsException
+
+        PatientWriteController .up.> ResponseEntity
+        PatientWriteController .up.> ErrorResponse
+        PatientWriteController .up.> HttpMessageNotReadableException
+        PatientWriteController .left.> HttpServletRequest
+
+        PatientWriteController .up.> Controller
+        PatientWriteController .up.> RequestMapping
+        PatientWriteController .up.> PathVariable
+        PatientWriteController .up.> RequestBody
+        PatientWriteController .up.> ExceptionHandler
+        PatientWriteController .up.> MethodArgumentNotValidException
+
+        PatientWriteController .right.> UUID
+        PatientWriteController .right.> Collection
+
+        PatientDTO .[hidden].> PatientWriteService
+    }
+}
+
+hide empty members
+
+footer (c) Jonah Doll, Juergen Zimmermann
+
+@enduml

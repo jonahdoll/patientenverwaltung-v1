@@ -2,6 +2,9 @@ package com.acme.patientverwaltung.service;
 
 import java.io.Serial;
 
+/// Exception, falls die Emailadresse bereits existiert.
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 public class EmailExistsException extends RuntimeException {
     @Serial
     private static final long serialVersionUID = -1591444778427523090L;

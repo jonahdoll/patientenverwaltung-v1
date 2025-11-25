@@ -3,6 +3,9 @@ package com.acme.patientverwaltung.repository;
 import com.acme.patientverwaltung.entity.Termin;
 import java.time.LocalDateTime;
 
+/// Builder-Klasse für die Klasse [Termin].
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 @SuppressWarnings({"NullAway.Init", "NotNullFieldNotInitialized", "PMD.AtLeastOneConstructor"})
 public class TerminBuilder {
     private LocalDateTime startZeitpunkt;

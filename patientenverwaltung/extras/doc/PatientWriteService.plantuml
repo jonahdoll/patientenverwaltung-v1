@@ -1,0 +1,44 @@
+@startuml KundeWriteService
+
+skinparam classAttributeIconSize 0
+
+package org.springframework.stereotype {
+    annotation Service
+}
+
+package java.util {
+    class UUID
+}
+
+package com.acme.patientenverwaltung {
+    package entity {
+        class Patient << entity >>
+    }
+
+    package repository {
+        class PatientRepository << control >> << @Repository >>
+    }
+
+    package service #DDDDDD {
+        class EmailExistsException
+
+        class PatientWriteService << control >> << @Service >> {
+            + create(patient: Patient): Patient
+            + update(patient: Patient, id: UUID)
+        }
+
+        PatientWriteService o--> "1" PatientRepository : repo
+
+        PatientWriteService .right.> Patient
+        PatientWriteService .up.> Service
+        PatientWriteService .up.> UUID
+
+        PatientWriteService ..> EmailExistsException
+    }
+}
+
+hide empty members
+
+footer (c) Jonah Doll, Jürgen Zimmermann
+
+@enduml

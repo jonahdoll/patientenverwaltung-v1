@@ -7,6 +7,9 @@ import com.acme.patientverwaltung.entity.VorerkrankungType;
 import java.time.LocalDate;
 import java.util.List;
 
+/// Builder-Klasse für die Klasse [Krankenakte].
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 @SuppressWarnings({"NullAway.Init", "PMD.AtLeastOneConstructor"})
 public class KrankenakteBuilder {
     private LocalDate erstellungsdatum;

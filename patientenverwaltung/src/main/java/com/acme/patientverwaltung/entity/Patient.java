@@ -5,6 +5,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
+/// Daten eines Patienten. Patient ist ein Aggregate Root.
+/// ![Klassendiagramm](../../../../../asciidoc/Patient.svg)
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 public class Patient {
     private UUID id;
     private String vorname;

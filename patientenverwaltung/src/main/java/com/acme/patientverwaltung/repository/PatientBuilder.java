@@ -8,6 +8,9 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
+/// Builder-Klasse für die Klasse [Patient].
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
 @SuppressWarnings({"NullAway.Init", "NotNullFieldNotInitialized", "PMD.AtLeastOneConstructor"})
 public class PatientBuilder {
     private UUID id;

@@ -10,6 +10,13 @@ import java.util.List;
 import org.hibernate.validator.constraints.UniqueElements;
 import org.jspecify.annotations.Nullable;
 
+/// ValueObject für das Neuanlegen und Ändern einer neuen Krankenakte.
+///
+/// @author [Jonah Doll](mailto:dojo1024@h-ka.de)
+/// @param erstellungsdatum Erstellungsdatum
+/// @param blutgruppe Blutgruppe
+/// @param vorerkrankungen Liste mit den Vorerkrankungen eines Patients
+/// @param medikamente Liste mit den Medikamenten eines Patients
 record KrankenakteDTO(
     @NotNull
     @PastOrPresent

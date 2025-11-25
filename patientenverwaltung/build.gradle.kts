@@ -88,7 +88,7 @@
 //  14) Initialisierung des Gradle Wrappers in der richtigen Version
 //      dazu ist ggf. eine Internetverbindung erforderlich
 //      https://docs.gradle.org/current/userguide/gradle_wrapper.html#sec:adding_wrapper
-//        gradle wrapper --gradle-version 9.2.0-rc-3
+//        gradle wrapper --gradle-version 9.4.0-milestone-2
 //        gradle wrapper --gradle-version latest
 
 // https://github.com/gradle/kotlin-dsl/tree/master/samples
@@ -216,7 +216,7 @@ defaultTasks = mutableListOf("compileTestJava")
 group = "com.acme"
 
 sweeney {
-    enforce(mapOf("type" to "gradle", "expect" to "[9.2.0,10.0.0)"))
+    enforce(mapOf("type" to "gradle", "expect" to "[9.4.0,10.0.0)"))
     enforce(mapOf("type" to "jdk", "expect" to "[25.0.1,26.0.0)"))
     validate()
 }
@@ -272,15 +272,14 @@ repositories {
 dependencies {
     //implementation(platform(libs.slf4j.bom))
     //implementation(platform(libs.log4j.bom))
-    //if (useObservability) {
-    //    implementation(platform(libs.zipkin.reporter.bom))
-    //    implementation(platform(libs.opentelemetry.bom))
-    //    implementation(platform(libs.micrometer.bom))
-    //    implementation(platform(libs.micrometer.tracing.bom))
-    //    implementation(platform(libs.prometheus.metrics.bom))
-    //}
+    if (useObservability) {
+        //implementation(platform(libs.zipkin.reporter.bom))
+        implementation(platform(libs.opentelemetry.bom))
+        //implementation(platform(libs.micrometer.bom))
+        //implementation(platform(libs.micrometer.tracing.bom))
+        //implementation(platform(libs.prometheus.metrics.bom))
+    }
     //implementation(platform(libs.jackson.bom))
-    //implementation(platform(libs.jackson-2.bom))
     //implementation(platform(libs.netty.bom))
     //implementation(platform(libs.reactor.bom))
     //implementation(platform(libs.spring.framework.bom))
@@ -296,7 +295,7 @@ dependencies {
 
     testImplementation(platform(libs.assertj.bom))
     //testImplementation(platform(libs.mockito.bom))
-    //testImplementation(platform(libs.junit.bom))
+    testImplementation(platform(libs.junit.bom))
 
     implementation(platform(libs.spring.boot.parent))
     // spring-boot-starter-parent als "Parent POM"
@@ -310,9 +309,8 @@ dependencies {
     annotationProcessor(libs.spring.boot.configurationProcessor)
 
     // "Starters" enthalten sinnvolle Abhaengigkeiten, die man i.a. benoetigt
-    implementation("org.springframework.boot:spring-boot-starter")
-    implementation("org.springframework.boot:spring-boot-starter-json")
-    implementation("org.springframework.boot:spring-boot-starter-web")
+    // https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide#starters
+    implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.springframework.boot:spring-boot-starter-validation")
 
     if (usePersistence) {
@@ -367,14 +365,10 @@ dependencies {
 
         // Micrometer mit OpenTelemetry zzgl. Prometheus fuer Metriken und Zipkin fuer Tracing
         // https://docs.spring.io/spring-boot/reference/actuator/tracing.html#actuator.micrometer-tracing.tracer-implementations.otel-zipkin
-        implementation("org.springframework.boot:spring-boot-starter-opentelemetry") {
-            // Prometheus statt "OpenTelemetry (OTel) Collector". OTLP = OpenTelemetry Protocol
-            exclude(group = "io.micrometer", module = "micrometer-registry-otlp")
-            exclude(group = "io.opentelemetry", module = "opentelemetry-exporter-otlp")
-
-            // wenn "OpenZipkin Brave" statt "micrometer-tracing-bridge-otel" verwendet werden soll (s.u.):
-            //exclude(group = "io.micrometer", module = "micrometer-tracing-bridge-otel")
-        }
+        // siehe auch org.springframework.boot:spring-boot-starter-opentelemetry
+        implementation("org.springframework.boot:spring-boot-micrometer-metrics")
+        implementation("org.springframework.boot:spring-boot-micrometer-tracing-opentelemetry")
+        implementation("org.springframework.boot:spring-boot-opentelemetry")
 
         // Visualisierung der Metriken durch Prometheus/Grafana
         // https://docs.spring.io/spring-boot/reference/actuator/endpoints.html
@@ -382,21 +376,21 @@ dependencies {
         implementation("io.micrometer:micrometer-registry-prometheus")
 
         // https://docs.spring.io/spring-boot/reference/actuator/tracing.html
-        // io.micrometer:micrometer-tracing-bridge-otel ist in spring-boot-starter-opentelemetry enthalten
         implementation("org.springframework.boot:spring-boot-starter-zipkin")
         implementation("io.opentelemetry:opentelemetry-exporter-zipkin")
+
         // alternativ: OpenZipkin Brave mit Zipkin
         // https://docs.spring.io/spring-boot/reference/actuator/tracing.html#actuator.micrometer-tracing.tracer-implementations.brave-zipkin
         //implementation("io.micrometer:micrometer-tracing-bridge-brave")
         //implementation("io.zipkin.reporter2:zipkin-reporter-brave")
+
+        // "Jaeger" statt "Zipkin: https://blog.devgenius.io/implementing-distributed-tracing-with-opentelemetry-and-spring-boot-3-2ccf66f305ab
     } else {
         println("Tracing und Metriken   d e a k t i v i e r t")
     }
 
     if (useGraphQL) {
         println("GraphQL                a k t i v i e r t")
-        // HttpGraphQlClient benoetigt WebClient mit Project Reactor
-        implementation("org.springframework.boot:spring-boot-starter-webflux")
         implementation("org.springframework.boot:spring-boot-starter-graphql")
     } else {
         println("GraphQL                d e a k t i v i e r t")
@@ -430,7 +424,7 @@ dependencies {
     }
 
     // einschl. JUnit und Mockito
-    testImplementation("org.springframework.boot:spring-boot-starter-test") {
+    testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test") {
         exclude(group = "org.hamcrest", module = "hamcrest")
         exclude(group = "org.skyscreamer", module = "jsonassert")
         exclude(group = "org.xmlunit", module = "xmlunit-core")
@@ -457,7 +451,7 @@ dependencies {
         //implementation(libs.json.smart)
         //implementation(libs.jspecify)
         implementation(libs.jakarta.validation)
-        implementation(libs.hibernate.validator)
+        //implementation(libs.hibernate.validator)
 
         if (useMail) {
             implementation(libs.angus.mail)
@@ -473,11 +467,11 @@ dependencies {
             }
         }
 
-        if (useGraphQL) {
-            implementation(libs.graphql.java.dataloader)
-            implementation(libs.graphql.java)
-            //implementation(libs.spring.graphql)
-        }
+        //if (useGraphQL) {
+        //    implementation(libs.graphql.java.dataloader)
+        //    implementation(libs.graphql.java)
+        //    implementation(libs.spring.graphql)
+        //}
 
         //implementation(libs.snakeyaml)
     }
@@ -572,6 +566,7 @@ tasks.named<JavaCompile>("compileTestJava") {
 
 tasks.named("bootJar", BootJar::class.java) {
     // in src/main/resources/
+    //exclude("private-key.pem", "certificate.crt", ".reloadtrigger")
 
     doLast {
         // CDS = Class Data Sharing seit Spring Boot 3.3.0
@@ -678,7 +673,7 @@ tasks.named("bootBuildImage", BootBuildImage::class.java) {
             // https://github.com/paketo-buildpacks/azul-zulu/releases
             buildpacks =
                 listOf(
-                    "paketo-buildpacks/ca-certificates",
+                    //"paketo-buildpacks/ca-certificates",
                     "paketobuildpacks/azul-zulu",
                     "paketobuildpacks/java",
                 )

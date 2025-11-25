@@ -17,6 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 import static com.acme.patientverwaltung.controller.Constants.API_PATH;
 import static com.acme.patientverwaltung.controller.Constants.ID_PATTERN;
 
+/// Ein Controller zum Lesen von Patienten
+/// ![Klassendiagramm](../../../../../asciidoc/PatientController.svg)
+///
+/// @author [Jonah Doll](mailto: dojo1024@h-ka.de)
 @RestController
 @RequestMapping(API_PATH)
 class PatientController {
